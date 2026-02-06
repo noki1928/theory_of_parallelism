@@ -23,7 +23,8 @@ int main() {
     }
 
 
-    double sum = 0;
+    R sum = 0;
+    
     for(auto val : array) {
         sum += val;
     }
