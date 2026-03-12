@@ -76,10 +76,11 @@ int main()
     
     int threads[7] = {2, 4, 6, 8, 16, 20, 40};
 
+    double tserial = run_serial();
+
     for(int i = 0; i < 7; i++) {;
         omp_set_num_threads(threads[i]);
-
-        double tserial = run_serial();
+                                
         double tparallel = run_parallel();
         printf("Threads count: %d\n", threads[i]);
         printf("Execution time (serial): %.6f\n", tserial);
